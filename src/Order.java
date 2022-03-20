@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * This class represent an Order
  * @author Femi Alogba
  * @version 1.0
  */
-
 public class Order {
     private int orderID;
     private static int orderCount;
@@ -13,8 +14,12 @@ public class Order {
     private ArrayList<Item> dailySpecials;
     
     public Order(){
-        this.orderID = Order.Order();
+        this.orderID = Order.getOrderID();
     }
+    /**
+    * Creates new order with specified  menu items
+    * @param menuItems the items ordered
+    */
     public Order(ArrayList<Item> menuItems){
         this.menuItems = menuItems;
         this.orderID = Order.getOrderID();
