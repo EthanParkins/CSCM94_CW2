@@ -1,4 +1,5 @@
-
+import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * This class represent a Take Away Order.
  * @author Femi Alogba
@@ -9,16 +10,19 @@ class TakeAway extends Order{
     /**
     * Creates a TakeAway without a specified pick up time (in minutes).
     */
-    public TakeAway(){
+    public TakeAway(ArrayList<Item> menuItems){
+        this.menuItems = new ArrayList<menuItems>;
         this.orderID = Order.getOrderID();
         this.tableID = EatIn.getTableID();
         this.waiterID = EatIn.getwaiterID();
     }
     /**
-    * Creates a TakeAway Order with a specified pick up time (in minutes).
+    * Creates a TakeAway Order with a specified pick up time by customer (in minutes).
     * @param tableID the table identification number.
     */
-    public TakeAway(int pickUpTime){
+    public TakeAway(ArrayList<Item> menuItems, int pickUpTime){
+        this.menuItems = new ArrayList<menuItems>;
+        this.orderID = Order.getOrderID();
         this.tableID = tableID;
         this.waiterID = EatIn.getwaiterID();
     }

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * This class represent an Eat-in Order.
  * @author Femi Alogba
@@ -10,6 +12,7 @@ class EatIn extends Order{
     * Creates an Eat-in Order without a specified table or waiter.
     */
     public EatIn(){
+        this.menuItems = new ArrayList<menuItems>;
         this.orderID = Order.getOrderID();
         this.tableID = EatIn.getTableID();
         this.waiterID = EatIn.getwaiterID();
@@ -18,14 +21,16 @@ class EatIn extends Order{
     * Creates an Eat-in Order with a specified table.
     * @param tableID the table identification number.
     */
-    public EatIn(int tableID){
+    public EatIn(ArrayList<Item> menuItems, int tableID){
+        this.menuItems = new ArrayList<menuItems>;
+        this.orderID = Order.getOrderID();
         this.tableID = tableID;
         this.waiterID = EatIn.getwaiterID();
     }
     /**
     * Assigns waiter to an Eat-in Order.
     */
-    public void assignWaiter(int tableID){
+    public void assignTable(int tableID){
         System.out.println("Waiter with ID: " + waiterID 
         + "would attend to you shortly");
     }
