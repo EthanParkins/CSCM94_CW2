@@ -12,7 +12,7 @@ class EatIn extends Order{
     * Creates an Eat-in Order without a specified table or waiter.
     */
     public EatIn(){
-        this.menuItems = new ArrayList<menuItems>;
+        this.menuItems = new ArrayList<String>();
         this.orderID = Order.getOrderID();
         this.tableID = EatIn.getTableID();
         this.waiterID = EatIn.getwaiterID();
@@ -21,8 +21,8 @@ class EatIn extends Order{
     * Creates an Eat-in Order with a specified table.
     * @param tableID the table identification number.
     */
-    public EatIn(ArrayList<Item> menuItems, int tableID){
-        this.menuItems = new ArrayList<menuItems>;
+    public EatIn(ArrayList<String> menuItems, int tableID){
+        this.menuItems = new ArrayList<String>();
         this.orderID = Order.getOrderID();
         this.tableID = tableID;
         this.waiterID = EatIn.getwaiterID();

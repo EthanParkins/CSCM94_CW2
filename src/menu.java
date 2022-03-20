@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class menu {
+public class Menu {
 	
 			//creates the arraylists for menu items & specials
 		private static ArrayList<String> items = new ArrayList<>();
