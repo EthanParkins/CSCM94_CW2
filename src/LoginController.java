@@ -37,8 +37,11 @@ public class LoginController implements Initializable {
 
     @FXML
     private void btnLoginClicked(javafx.event.ActionEvent event) {
+        //pulls infomation from text fields
         String userID = tfUserID.getText();
         String lastName = tfPassword.getText();
+        
+        //test code, will be 'incorrect password' text, when checking ID vs password
         lbInfo.setText("Welcome " + userID);
     }
 }
