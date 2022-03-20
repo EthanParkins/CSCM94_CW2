@@ -29,7 +29,7 @@ public class Login extends Application{
         stage.initStyle(StageStyle.DECORATED.UNDECORATED);
  
         
-        //Allows moving of the box, but no readjusting 
+        //When clicking box drags it from that position, rather than top left
         root.setOnMousePressed(new EventHandler<MouseEvent>(){
             @Override
             public void handle (MouseEvent event){
@@ -39,6 +39,7 @@ public class Login extends Application{
             
         });
         
+        //Moves the box with mouse
         root.setOnMouseDragged(new EventHandler<MouseEvent>(){
             @Override
             public void handle (MouseEvent event){
