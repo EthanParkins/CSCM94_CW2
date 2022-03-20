@@ -1,26 +1,31 @@
+import java.util.ArrayList;
+import java.util.Scanner;
 /**
- * This class represent an Eat-in Order
+ * This class represent a delivery Order
  * @author Femi Alogba
  * @version 1.0
  */
-class EatIn extends Order{
-    private int tableID;
-    private int waiterID;
+class Delivery extends Order{
+    private int driverID;
+    private int deliverTime;
+    private boolean approved;
+    private String deliveryAddress;
     /**
-    * Creates an Eat-in Order without a specified table or waiter
+    * Creates a Delivery Order
+    * @param menuItems Menu items of restaurant.
+    * @param deliveryAddress Delivery address of customer.
     */
-    public EatIn(){
+    public Delivery(ArrayList<Item> menuItems, String deliveryAddress){
+        this.menuItems = new ArrayList<menuItems>;
         this.orderID = Order.getOrderID();
-        this.tableID = EatIn.getTableID();
-        this.waiterID = EatIn.getwaiterID();
+        this.driverID = EatIn.getdriverID();
+        this.deliveryAddress = deliveryAddress;
     }
     /**
-    * Creates an Eat-in Order with a specified table
-    * @param tableID the table identification number
+    * Assigns driver to a delivery Order.
+    * @param orderID the Order identification number.
     */
-    public EatIn(int tableID){
-        this.tableID = tableID;
-        this.waiterID = EatIn.getwaiterID();
+    public void assignDriver(int orderID){
+        
+        System.out.println("Your order has been dispatched");
     }
-    /**
-    * Assigns waiter to an Eat-in Or

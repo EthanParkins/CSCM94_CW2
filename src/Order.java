@@ -21,7 +21,7 @@ public class Order {
     * @param menuItems the items ordered
     */
     public Order(ArrayList<Item> menuItems){
-        this.menuItems = menuItems;
+        this.menuItems = new ArrayList<menuItems>;
         this.orderID = Order.getOrderID();
         
     }
