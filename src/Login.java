@@ -9,6 +9,12 @@ import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.StageStyle;
 
+/**
+ * LogIn GUI creator
+ * @author Ethan
+ * version 1.4
+ */
+
 public class Login extends Application{
     
     private double xOffset = 0;
