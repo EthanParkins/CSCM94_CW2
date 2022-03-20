@@ -7,11 +7,11 @@ import java.util.Scanner;
  * @version 1.0
  */
 public class Order {
-    private int orderID;
+    protected int orderID;
     private static int orderCount;
     private boolean complete;
-    private ArrayList<Item> menuItems;
-    private ArrayList<Item> dailySpecials;
+    protected ArrayList<String> menuItems;
+    protected ArrayList<String> dailySpecials;
     
     public Order(){
         this.orderID = Order.getOrderID();
@@ -20,18 +20,18 @@ public class Order {
     * Creates new order with specified  menu items
     * @param menuItems the items ordered
     */
-    public Order(ArrayList<Item> menuItems){
-        this.menuItems = new ArrayList<menuItems>;
+    public Order(ArrayList<String> menuItems){
+        this.menuItems = new ArrayList<String>();
         this.orderID = Order.getOrderID();
         
     }
-    public void addToOrder(Item Order){
+    public void addToOrder(String Order){
         System.out.println(Order + "added to your order!");
     }
-    public void removeFromOrder(Item Order){
+    public void removeFromOrder(String Order){
         System.out.println(Order + "removed from your order!");
     }
-    public ArrayList<Item> getOrder(int orderID){
+    public ArrayList<String> getOrder(int orderID){
         return Order;
     }
     public boolean getComplete(int orderID){

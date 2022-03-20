@@ -15,8 +15,8 @@ class Delivery extends Order{
     * @param menuItems Menu items of restaurant.
     * @param deliveryAddress Delivery address of customer.
     */
-    public Delivery(ArrayList<Item> menuItems, String deliveryAddress){
-        this.menuItems = new ArrayList<menuItems>;
+    public Delivery(ArrayList<String> menuItems, String deliveryAddress){
+        this.menuItems = new ArrayList<String>();
         this.orderID = Order.getOrderID();
         this.driverID = EatIn.getdriverID();
         this.deliveryAddress = deliveryAddress;
