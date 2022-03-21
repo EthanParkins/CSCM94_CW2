@@ -12,7 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 /**
- * FXML Controller class
+ * FXML Controller class for the login scene
  *
  * @author Ethan
  */
@@ -47,29 +47,14 @@ public class LoginController implements Initializable {
         String password = tfPassword.getText();
         String filepath = "login.txt"; 
         verifyFile(userID,password,filepath);
-        
-        /* creates file and adds to it, but only one thing and doesn't read 
-        wasn't a good tutorial
-        StringBuilder login = new StringBuilder();
-        login.append(tfUserID.getText().toString() + "\n");
-        login.append(tfPassword.getText().toString() + "\n");
-        
-        File loginFile = new File("C:\\Users\\Ethan\\OneDrive\\Comp Sci\\CSCM94\\CW2\\CSCM94_CW2\\login.txt");
-        FileWriter writer = new FileWriter(loginFile);
-        writer.write(login.toString());
-        writer.close();
-        */
-        
-        /*
-        inital test
-        //pulls infomation from text fields
-        String userID = tfUserID.getText();
-        String lastName = tfPassword.getText();
-        //test code, will be 'incorrect password' text, when checking ID vs password
-        lbInfo.setText("Welcome " + userID);  
-        */
     }
     
+    /**
+     * Method to verify user input compared to a file
+     * @param username the
+     * @param password
+     * @param filepath 
+     */
     public void verifyFile(String username, String password, String filepath){
         boolean found = false;
         String tempUsername = "";
