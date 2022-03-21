@@ -43,7 +43,7 @@
                </font>
             </Button>
             <Label fx:id="lbInfo" layoutX="98.0" layoutY="291.0" prefHeight="17.0" prefWidth="166.0" textFill="RED" />
-            <Button layoutX="146.0" layoutY="353.0" mnemonicParsing="false" text="Register" />
+            <Button layoutX="146.0" layoutY="353.0" mnemonicParsing="false" onAction="#switchToCustomerRegister" text="Register" />
          </children>
       </AnchorPane>
    </center>

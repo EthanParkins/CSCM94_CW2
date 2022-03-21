@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -21,7 +22,7 @@ import javafx.stage.Stage;
  * @author Ethan
  */
 public class LoginController implements Initializable {
-
+    
     @FXML
     private TextField tfUserID;
     @FXML
@@ -35,6 +36,11 @@ public class LoginController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    
+    @FXML
+    private PasswordField tfRegisterPassword;
+    @FXML
+    private Label lbCustomerID;
             
     
     /**
@@ -111,5 +117,10 @@ public class LoginController implements Initializable {
         catch(Exception e){
             lbInfo.setText("Incorrect Username/Password");
         }
+    }
+
+    @FXML
+    private void btnRegisterClicked(javafx.event.ActionEvent event) {
+        System.out.println("registered");
     }
 }
