@@ -29,21 +29,21 @@
    <center>
       <AnchorPane prefHeight="500.0" prefWidth="350.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="tfUserID" layoutX="101.0" layoutY="213.0" promptText="User ID" />
-            <PasswordField fx:id="tfPassword" layoutX="101.0" layoutY="259.0" promptText="Password" />
-            <Button layoutX="153.0" layoutY="315.0" mnemonicParsing="false" onAction="#btnLoginClicked" text="Login" />
-            <Text fill="#007cff" layoutX="127.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+            <TextField layoutX="101.0" layoutY="213.0" promptText="User ID" />
+            <PasswordField layoutX="101.0" layoutY="259.0" promptText="Password" />
+            <Button layoutX="150.0" layoutY="300.0" mnemonicParsing="false" text="Register" />
+            <Text fill="#007cff" layoutX="33.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Account">
                <font>
                   <Font name="Arial Black" size="30.0" />
                </font>
             </Text>
-            <Button layoutX="323.0" layoutY="-5.0" mnemonicParsing="false" onAction="#btnExitClicked" style="-fx-background-color: transparent;" text="X" textFill="#007cff">
+            <Button layoutX="323.0" layoutY="-5.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="X" textFill="#007cff">
                <font>
                   <Font name="Arial Black" size="17.0" />
                </font>
             </Button>
-            <Label fx:id="lbInfo" layoutX="98.0" layoutY="291.0" prefHeight="17.0" prefWidth="166.0" textFill="RED" />
-            <Button layoutX="146.0" layoutY="353.0" mnemonicParsing="false" text="Register" />
+            <Label layoutX="98.0" layoutY="291.0" prefHeight="17.0" prefWidth="166.0" textFill="RED" />
+            <Button layoutX="151.0" layoutY="337.0" mnemonicParsing="false" onAction="#switchToLogin" text="Login" />
          </children>
       </AnchorPane>
    </center>

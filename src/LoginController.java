@@ -1,15 +1,19 @@
-import java.awt.event.ActionEvent;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class for the login scene
@@ -24,9 +28,14 @@ public class LoginController implements Initializable {
     private PasswordField tfPassword;
     @FXML
     private Label lbInfo;
+   
     
     private static Scanner in;
-
+    
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+            
     
     /**
      * Initializes the controller class.
@@ -35,12 +44,12 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
+    
     @FXML
     private void btnExitClicked(javafx.event.ActionEvent event) {
         System.exit(0);
     }
-
+    
     @FXML
     private void btnLoginClicked(javafx.event.ActionEvent event) throws IOException {
         String userID = tfUserID.getText();
@@ -48,6 +57,27 @@ public class LoginController implements Initializable {
         String filepath = "login.txt"; 
         verifyFile(userID,password,filepath);
     }
+    
+    @FXML
+    public void switchToLogin(javafx.event.ActionEvent event) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        //creates a node for the scene
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    @FXML
+    public void switchToCustomerRegister(javafx.event.ActionEvent event) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("CustomerRegister.fxml"));
+        //creates a node for the scene
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
     
     /**
      * Method to verify user input compared to a file
