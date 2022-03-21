@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,11 +12,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class for the login scene
+ * FXML Controller class for the login and registration scene
  *
  * @author Ethan
  */
@@ -72,18 +70,24 @@ public class LoginController implements Initializable {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        
     }
     
     @FXML
     public void switchToCustomerRegister(javafx.event.ActionEvent event) throws IOException{
         root = FXMLLoader.load(getClass().getResource("CustomerRegister.fxml"));
         //creates a node for the scene
+
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.show();
+        stage.show();   
     }
     
+    @FXML
+    public void generateID(javafx.event.ActionEvent event){
+        //lbCustomerID.setText("Auto generated ID here");
+    }
     
     /**
      * Method to verify user input compared to a file
@@ -121,6 +125,8 @@ public class LoginController implements Initializable {
 
     @FXML
     private void btnRegisterClicked(javafx.event.ActionEvent event) {
-        System.out.println("registered");
+        // when buttons clicked, save password and auto generated ID to text file#
+        //lock register button too?
+        lbCustomerID.setText("Auto generated ID here");
     }
 }

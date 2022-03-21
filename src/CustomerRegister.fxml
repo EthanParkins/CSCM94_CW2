@@ -28,7 +28,7 @@
    <center>
       <AnchorPane prefHeight="500.0" prefWidth="350.0" BorderPane.alignment="CENTER">
          <children>
-            <PasswordField fx:id="tfRegisterPassword" layoutX="101.0" layoutY="259.0" promptText="Password" />
+            <PasswordField fx:id="tfRegisterPassword" layoutX="101.0" layoutY="259.0" onKeyTyped="#generateID" promptText="Password" />
             <Button layoutX="150.0" layoutY="300.0" mnemonicParsing="false" onAction="#btnRegisterClicked" text="Register" />
             <Text fill="#007cff" layoutX="33.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Account">
                <font>
@@ -40,7 +40,6 @@
                   <Font name="Arial Black" size="17.0" />
                </font>
             </Button>
-            <Label layoutX="98.0" layoutY="291.0" prefHeight="17.0" prefWidth="166.0" textFill="RED" />
             <Button layoutX="151.0" layoutY="337.0" mnemonicParsing="false" onAction="#switchToLogin" text="Login" />
             <Label fx:id="lbCustomerID" layoutX="177.0" layoutY="232.0" prefHeight="17.0" prefWidth="147.0">
                <font>
