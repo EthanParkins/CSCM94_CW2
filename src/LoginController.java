@@ -74,7 +74,7 @@ public class LoginController implements Initializable {
             }
             in.close();
             if(!found){
-                lbInfo.setText("Incorrect Username/Passowrd");
+                lbInfo.setText("Incorrect Username/Password");
             }
             
         }
