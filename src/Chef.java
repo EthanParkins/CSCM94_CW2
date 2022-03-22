@@ -12,8 +12,8 @@ public class Chef extends User {
 		Chef.count++;
 	}
 	
-	public String toString() {
-		return this.chefID + " " + this.getName();
+	public String getChefID(){
+		return this.chefID;
 	}
 	
 	//public viewOrders() {

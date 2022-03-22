@@ -12,4 +12,8 @@ public class Waiter extends Staff {
 		this.waiterID = "W" + String.valueOf(Waiter.count);
 		Waiter.count++;
 	}
+
+	public String getWaiterId(){
+		return this.waiterID;
+	}
 }

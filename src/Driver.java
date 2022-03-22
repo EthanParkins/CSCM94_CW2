@@ -10,4 +10,8 @@ public class Driver extends Staff {
 		this.driverID = "D" + String.valueOf(Driver.count);
 		Driver.count++;
 	}
+
+	public String getDriverID(){
+		return this.driverID;
+	}
 }

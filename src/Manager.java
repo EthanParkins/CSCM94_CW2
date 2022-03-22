@@ -30,4 +30,9 @@ public class Manager extends Staff {
 		Manager manager = new Manager(firstName, lastName);
 		Manager.managers.add(manager);
 	}
+
+	public String getManagerID(){
+		return this.managerID;
+	}
 }
+
