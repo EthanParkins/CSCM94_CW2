@@ -35,10 +35,6 @@ public class LoginController implements Initializable {
     private Scene scene;
     private Parent root;
     
-    @FXML
-    private PasswordField tfRegisterPassword;
-    @FXML
-    private Label lbCustomerID;
             
     
     /**
@@ -63,17 +59,6 @@ public class LoginController implements Initializable {
     }
     
     @FXML
-    public void switchToLogin(javafx.event.ActionEvent event) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-        //creates a node for the scene
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-        
-    }
-    
-    @FXML
     public void switchToCustomerRegister(javafx.event.ActionEvent event) throws IOException{
         root = FXMLLoader.load(getClass().getResource("CustomerRegister.fxml"));
         //creates a node for the scene
@@ -81,12 +66,7 @@ public class LoginController implements Initializable {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.show();   
-    }
-    
-    @FXML
-    public void generateID(javafx.event.ActionEvent event){
-        //lbCustomerID.setText("Auto generated ID here");
+        stage.show(); 
     }
     
     /**
@@ -121,12 +101,5 @@ public class LoginController implements Initializable {
         catch(Exception e){
             lbInfo.setText("Incorrect Username/Password");
         }
-    }
-
-    @FXML
-    private void btnRegisterClicked(javafx.event.ActionEvent event) {
-        // when buttons clicked, save password and auto generated ID to text file#
-        //lock register button too?
-        lbCustomerID.setText("Auto generated ID here");
     }
 }
