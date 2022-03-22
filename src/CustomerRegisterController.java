@@ -19,7 +19,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
+ * FXML Controller class for the customer register
  *
  * @author Ethan
  */

@@ -15,7 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class for the login and registration scene
+ * FXML Controller class for the login scene
  *
  * @author Ethan
  */
