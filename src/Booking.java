@@ -9,8 +9,8 @@ public class Booking {
 	
 	//private ArrayList<Booking> booking;
 	private int numGuest;
-	private Date date;
-	private Date endDate;
+	private Calendar startDate = Calendar.getInstance();
+	private Calendar endDate;
 	private int id;
 	private int duration;
 	private boolean approved;
@@ -23,16 +23,17 @@ public class Booking {
 	public Booking (int customerID, int guest, String date) {
 		id = customerID;
 		numGuest = guest;
-		this.date = toDate(date);
+		startDate = toCalendar(date);
 		duration = 1;
-		endDate = ;
+		endDate = end(toCalendar(date));
 		approved = false;
 		confirmation = true;
 	}
 	
 	@Override
 	public String toString() {
-		return "ID: " + id + "\nDate and time: " + date.toString() + "\nDuration: " + duration + " hour\nApproved: " + approved;
+		return "ID: " + id + "\nBooking start: " + startDate.getTime() + "\nBooking end: " + 
+	endDate.getTime() + "\nDuration: " + duration + " hour\nApproved: " + approved ;
 	}
 	
 	public int getID() {
@@ -53,7 +54,7 @@ public class Booking {
 	
 	public void extendDuration(int newTime) {
 		duration = newTime;
-		
+		endDate.add(Calendar.HOUR_OF_DAY, duration);
 	}
 	
 	public void approve() {
@@ -78,11 +79,33 @@ public class Booking {
 		return dateTime;
 	}
 	
+	//Sets the input date string from a date variable to a Calendar variable
+	//I set the date as a Calendar variable as it was easier to increment the time for the booking
+	private Calendar toCalendar(String date) {
+		Calendar dateTime = Calendar.getInstance();
+		
+		dateTime.setTime(toDate(date));
+		
+		return dateTime;
+	}
+	
+	//Sets the initial end time of the booking
+	private Calendar end(Calendar start) {
+		Calendar endTime = start;
+		
+		endTime.add(Calendar.HOUR_OF_DAY, duration);
+		
+		return endTime;
+	}
 	
 	
 	public static void main(String[] args) {
 		Date date = new Date();
 		Booking b1 = new Booking(10928, 4, "22/03/22 12:00");
+		
+		System.out.println(b1.toString());
+		
+		b1.extendDuration(3);
 		
 		System.out.println(b1.toString());
 	}
