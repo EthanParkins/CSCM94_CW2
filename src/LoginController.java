@@ -88,8 +88,29 @@ public class LoginController implements Initializable {
                 tempUsername = in.next();
                 tempPassword = in.next();
                 if(tempUsername.trim().equals(username.trim()) && tempPassword.trim().equals(password.trim())){
-                    found = true;
-                    lbInfo.setText("logging in...");
+                    found = true;                    
+                    char firstLetter = username.charAt(0);
+                    //switch statement to load up the specifc menu for each user
+                    switch(firstLetter){
+                        case 'C':
+                            System.out.println("loading customer...");
+                            break;
+                        case 'M':
+                            System.out.println("loading Manager...");
+                            break;
+                        case 'W':
+                            System.out.println("loading Waiter...");
+                            break;
+                        case 'F':
+                            System.out.println("loading Chef...");
+                            break;
+                        case 'D':
+                            System.out.println("loading Driver...");
+                            break;
+                        default:
+                            break;
+                    }
+
                 }
             }
             in.close();
