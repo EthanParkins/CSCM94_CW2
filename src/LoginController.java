@@ -55,7 +55,7 @@ public class LoginController implements Initializable {
         String userID = tfUserID.getText();
         String password = tfPassword.getText();
         String filepath = "login.txt"; 
-        verifyFile(userID,password,filepath);
+        verifyFile(userID,password,filepath, event);
     }
     
     @FXML
@@ -68,14 +68,14 @@ public class LoginController implements Initializable {
         stage.setScene(scene);
         stage.show(); 
     }
-    
+        
     /**
      * Method to verify user input compared to a file
      * @param username the
      * @param password
      * @param filepath 
      */
-    public void verifyFile(String username, String password, String filepath){
+    public void verifyFile(String username, String password, String filepath, javafx.event.ActionEvent event){
         boolean found = false;
         String tempUsername = "";
         String tempPassword = "";
@@ -106,7 +106,14 @@ public class LoginController implements Initializable {
                             break;
                         case 'D':
                             System.out.println("loading Driver...");
+                            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                            root = FXMLLoader.load(getClass().getResource("DriverDisplay.fxml"));
+                            scene = new Scene(root);
+                            stage.setScene(scene);
+                            stage.show(); 
+
                             break;
+
                         default:
                             break;
                     }
