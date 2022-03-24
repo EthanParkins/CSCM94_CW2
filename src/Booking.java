@@ -90,7 +90,7 @@ public class Booking {
 		return endTime;
 	}
 	
-	
+	/*
 	public static void main(String[] args) {
 		Date date = new Date();
 		Booking b1 = new Booking(10928, 4, "22/03/22 12:00");
@@ -102,5 +102,6 @@ public class Booking {
 		b1.approve();
 		System.out.println(b1.toString());
 	}
+*/
 	
 }

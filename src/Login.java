@@ -9,7 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.StageStyle;
 
 /**
- * LogIn GUI creator
+ * GUI Initialiser  
  * @author Ethan
  * version 1.4
  */
@@ -48,8 +48,6 @@ public class Login extends Application{
             }
             
         });
-        
-        
         stage.setScene(scene);
         stage.show();
         
