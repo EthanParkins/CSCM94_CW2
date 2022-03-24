@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,7 +24,6 @@ public class CustomerRegisterController implements Initializable {
     private PasswordField tfRegisterPassword;
     @FXML
     private Label lbCustomerID;
-
     private Stage stage;
     private Scene scene;
     private Parent root;

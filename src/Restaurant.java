@@ -11,7 +11,7 @@ public class Restaurant {
     
     private static String name = "Cafe94";
     private ArrayList<Table> tables = new ArrayList<>();
-    private static int capacity = 120;
+    private static int capacity = 76;
     
     //constructor
     public Restaurant(){       
