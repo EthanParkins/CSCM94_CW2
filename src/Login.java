@@ -54,6 +54,9 @@ public class Login extends Application{
     }
     
     public static void main(String[] args){
+        //main class that will be used to store arraylists
+        //Do cafe94.addDriver(); etc. See Data.java for examples.
+        Restaurant Cafe94 = new Restaurant();
         launch(args);
     }
 }

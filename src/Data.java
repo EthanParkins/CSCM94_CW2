@@ -12,7 +12,6 @@ import java.util.Scanner;
  * @author Ethan
  */
 public class Data {   
-
     
     /**
      * Method to save all driver objects stored in a list
