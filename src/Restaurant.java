@@ -12,12 +12,21 @@ public class Restaurant {
     private static String name = "Cafe94";
     private ArrayList<Table> tables = new ArrayList<>();
     private static int capacity = 76;
-    
+    private ArrayList<Driver> driverList = new ArrayList<>();
     //constructor
     public Restaurant(){       
     }
     
     //methods
+    
+    
+    public void addDriver(Driver driver) {
+        driverList.add(driver);
+    }
+        
+    public ArrayList<Driver> getDrivers() {
+        return driverList;
+    }
     
     /**
      * Method to return the most popular items ordered

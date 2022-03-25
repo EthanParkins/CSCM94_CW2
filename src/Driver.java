@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Driver extends Staff {
 	private String driverID;
-	static ArrayList<Driver> drivers = new ArrayList<>();
+	//static ArrayList<Driver> drivers = new ArrayList<>();
 	static int count = 0;
 
 	public Driver(String firstName, String lastName) {
@@ -14,4 +14,9 @@ public class Driver extends Staff {
 	public String getDriverID(){
 		return this.driverID;
 	}
+        
+        public String toString(){
+            return this.getFirst() + "|" + this.getLast() + "|" + this.driverID
+                    + "|" + this.getSchedule() + "|" + this.getHoursWorked(); 
+        }
 }
