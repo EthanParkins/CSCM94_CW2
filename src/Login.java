@@ -4,13 +4,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.StageStyle;
 
 /**
- * LogIn GUI creator
+ * GUI Initialiser  
  * @author Ethan
  * version 1.4
  */
@@ -24,6 +23,7 @@ public class Login extends Application{
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         Scene scene = new Scene(root);
+        
         
         //removes top bar of application and functions to move
         stage.initStyle(StageStyle.DECORATED.UNDECORATED);
@@ -48,13 +48,15 @@ public class Login extends Application{
             }
             
         });
-        
-        
         stage.setScene(scene);
         stage.show();
+        
     }
     
     public static void main(String[] args){
+        //main class that will be used to store arraylists
+        //Do cafe94.addDriver(); etc. See Data.java for examples.
+        Restaurant Cafe94 = new Restaurant();
         launch(args);
     }
 }

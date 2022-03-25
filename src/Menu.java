@@ -3,12 +3,28 @@ import java.util.Collections;
 
 public class Menu {
 	
-			//creates the arraylists for menu items & specials
+		//creates the arraylists for menu items & specials
 		private static ArrayList<String> items = new ArrayList<>();
 		private static ArrayList<String> specials = new ArrayList<>();
 		
+		static {
+			items.add("0. Tea");
+			items.add("1. Coffee");
+			items.add("2. Bagel");
+			items.add("3. Donut");
+			items.add("4. Croissant");
+			items.add("5. Sandwich");
+			items.add("6. Pizza");
+			items.add("7. Cupcake");
+			items.add("8. Full English");
+			items.add("9. Salad");
+			items.add("10. Cake");
+			items.add("11. Ice Cream");
+		}
+		
+		
 		//Below are the items methods
-		public static void itemsAdd(String item) {
+		public static void addItem(String item) {
 			items.add(item);
 		}
 		
