@@ -49,4 +49,8 @@ public class Restaurant {
     public void addTable(Table table){
         tables.add(table);
     }
+    
+    public ArrayList<Table> getTables (Table table){
+        return tables;
+    }
 }
