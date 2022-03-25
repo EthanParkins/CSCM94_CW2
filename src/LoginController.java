@@ -105,7 +105,6 @@ public class LoginController implements Initializable {
                             System.out.println("loading Chef...");
                             break;
                         case 'D':
-                            System.out.println("loading Driver...");
                             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                             root = FXMLLoader.load(getClass().getResource("DriverDisplay.fxml"));
                             scene = new Scene(root);

@@ -42,4 +42,11 @@ public class Restaurant {
     public void getActiveCustomers(Customer customerHistory){
         
     }
+    /**
+     * Method to add a table object to an array of tables
+     * @param table 
+     */
+    public void addTable(Table table){
+        tables.add(table);
+    }
 }

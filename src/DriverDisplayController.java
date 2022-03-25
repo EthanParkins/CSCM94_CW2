@@ -35,7 +35,7 @@ public class DriverDisplayController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        lbOrders.setText("test");
     }    
 
     @FXML
