@@ -27,8 +27,11 @@ public class CustomerRegisterController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    
     /**
-     * Initializes the controller class.
+     * Initialises the Scene
+     * @param url
+     * @param rb 
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -37,6 +40,7 @@ public class CustomerRegisterController implements Initializable {
         lbCustomerID.setText("test");
     }    
 
+    
     @FXML
     private void generateID(KeyEvent event) {
     }
@@ -45,11 +49,20 @@ public class CustomerRegisterController implements Initializable {
     private void btnRegisterClicked(ActionEvent event) {
     }
 
+    /**
+     * Method to exit the application
+     * @param event 
+     */
     @FXML
     private void btnExitClicked(ActionEvent event) {
         System.exit(0);
     }
-
+    
+    /**
+     * Method to switch scenes to login
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void switchToLogin(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Login.fxml"));

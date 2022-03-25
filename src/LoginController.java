@@ -45,11 +45,20 @@ public class LoginController implements Initializable {
         // TODO
     }    
     
+    /**
+     * Method to exit the application
+     * @param event 
+     */
     @FXML
     private void btnExitClicked(javafx.event.ActionEvent event) {
         System.exit(0);
     }
     
+    /**
+     * Method to take in the inputs of the login and password fields 
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void btnLoginClicked(javafx.event.ActionEvent event) throws IOException {
         String userID = tfUserID.getText();
@@ -58,6 +67,11 @@ public class LoginController implements Initializable {
         verifyFile(userID,password,filepath, event);
     }
     
+    /**
+     * Method to switch to the register scene
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     public void switchToCustomerRegister(javafx.event.ActionEvent event) throws IOException{
         root = FXMLLoader.load(getClass().getResource("CustomerRegister.fxml"));

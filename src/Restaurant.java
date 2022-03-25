@@ -19,11 +19,18 @@ public class Restaurant {
     
     //methods
     
-    
+    /**
+     * Method to add a driver to a list in this class
+     * @param driver 
+     */
     public void addDriver(Driver driver) {
         driverList.add(driver);
     }
         
+    /**
+     * Method to return drivers from the list
+     * @return 
+     */
     public ArrayList<Driver> getDrivers() {
         return driverList;
     }

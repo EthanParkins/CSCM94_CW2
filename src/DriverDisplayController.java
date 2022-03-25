@@ -14,7 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
+ * FXML Controller class for the Driver Display
  *
  * @author Ethan
  */
@@ -30,14 +30,22 @@ public class DriverDisplayController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+
     /**
-     * Initializes the controller class.
+     * Initialises the controller class.
+     * @param url
+     * @param rb 
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         lbOrders.setText("test");
     }    
-
+    
+    /**
+     * Method to switch scene to login.
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void btnLogOut(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Login.fxml"));
@@ -48,11 +56,19 @@ public class DriverDisplayController implements Initializable {
         stage.show();
     }
 
+    /**
+     * Method to exit the application
+     * @param event 
+     */
     @FXML
     private void btnExit(ActionEvent event) {
         System.exit(0);
     }
 
+    /**
+     * Method to complete specified order 
+     * @param event 
+     */
     @FXML
     private void btnCompleteClicked(ActionEvent event) {
     }
